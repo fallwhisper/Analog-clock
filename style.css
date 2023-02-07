@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(271, 76%, 53%, .8);
+    overflow: hidden;
+}
+.clock {
+    background-color: antiquewhite;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: solid 5px rgb(0, 0, 0) ;
+}
+
+.clock .hand {
+    --rotation: 0;
+    left: 50%;
+    bottom: 50%;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+#seconds-hand {
+    position: absolute;
+    height: 130px;
+    width: 2px;
+    background-color: red;
+    opacity: 50%;
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+}
+
+#minutes-hand {
+    position: absolute;
+    height: 100px;
+    width: 4px;
+    background-color: rgb(23, 0, 156);
+    right: 50%;
+    bottom: 50%;
+    opacity: 50%;
+    transform-origin: bottom;
+    border: solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+
+}
+
+#hours-hand {
+    position: absolute;
+    height: 80px;
+    width: 6px;
+    background-color: rgb(89, 6, 128);
+    right: 50%;
+    bottom: 50%;
+    opacity: 50%;
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+}
+
+#center {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    z-index: 11;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.clock .numbers {
+    --rotation: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+}
+
+.clock .number1{--rotation: 30deg}
+.clock .number2{--rotation: 60deg}
+.clock .number3{--rotation: 90deg}
+.clock .number4{--rotation: 120deg}
+.clock .number5{--rotation: 150deg}
+.clock .number6{--rotation: 180deg}
+.clock .number7{--rotation: 210deg}
+.clock .number8{--rotation: 240deg}
+.clock .number9{--rotation: 270deg}
+.clock .number10{--rotation: 300deg}
+.clock .number11{--rotation: 330deg}
+.clock .number12{--rotation: 360deg}
